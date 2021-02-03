@@ -1,4 +1,4 @@
-Why C programming is awesome
+why C programming is awesome
 Who invented C
 Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
 What happens when you type gcc main.c
@@ -10,4 +10,4 @@ How to compile using gcc
 What is the default program name when compiling with gcc
 What is the official Holberton C coding style and how to check your code with betty-style
 How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+How does the main function influence the return value of the program.
