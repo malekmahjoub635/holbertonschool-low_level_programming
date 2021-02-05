@@ -18,7 +18,7 @@ putchar(i + '0');
 if ((ch != 9) || (i != 9))
 {
 putchar(',');
-putchar(' '); 
+putchar(' ');
 }
 }
 }
