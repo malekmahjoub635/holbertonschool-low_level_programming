@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-char 
-
+int ch;
+for(ch = 'a'; ch <= 'z'; ch++)
+putchar(ch);
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-
 return (0);
 }
