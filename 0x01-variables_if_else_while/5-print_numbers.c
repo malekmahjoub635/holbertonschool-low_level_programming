@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-int n;
-for (n= 0; n <= 10; n++)
+int ch;
+for (ch = 0; ch <= 10; ch++)
 putchar(ch);
 return (0);
 }
