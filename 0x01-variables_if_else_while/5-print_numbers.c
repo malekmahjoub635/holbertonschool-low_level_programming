@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
  * main - main block
@@ -8,6 +7,7 @@
 int main(void)
 {
 int n;
-for (n = 0; n<10; n++)
+for (n= 0; n <= 10; n++)
+putchar(ch);
 return (0);
 }
