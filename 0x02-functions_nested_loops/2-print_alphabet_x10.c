@@ -10,9 +10,9 @@ int l;
 for (m = 0; m < 10; m++)
 for (l = 'a'; l <= 'z'; l++)
 {
-putchar(l);
+_putchar(l);
 }
 {
-putchar('\n');
+_putchar('\n');
 }
 }
