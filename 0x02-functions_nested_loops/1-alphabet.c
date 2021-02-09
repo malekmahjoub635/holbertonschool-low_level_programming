@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - main block
+ * print_alphabet - check the code for Holberton School students.
  * Return: 0
  */
 void print_alphabet(void)
