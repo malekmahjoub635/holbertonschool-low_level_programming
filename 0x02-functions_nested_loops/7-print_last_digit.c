@@ -5,7 +5,7 @@
  *@n: is for parameter
  * Return: Always 0.
  */
-int print_last_digit(int n);
+int print_last_digit(int n)
 {
 int n, i;
 i = n % 10;
