@@ -10,6 +10,7 @@ int l;
 for (m = 0; m < 10; m++)
 {
 for (l = 'a'; l <= 'z'; l++)
+}
 {
 _putchar(l);
 }
