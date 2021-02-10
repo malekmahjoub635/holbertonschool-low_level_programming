@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  *add - a function that adds integers
- *Return: 0
+ *Return: result of addition
  */
 int add (int a, int n)
 {
