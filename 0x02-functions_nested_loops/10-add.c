@@ -2,8 +2,8 @@
 /**
  *add - a function that adds integers
  *Return: result of addition
- *@a: first integer
- *@b: second integer
+ *@a: is a parameter
+ *@n: second parameter
  */
 int add(int a, int n)
 {
