@@ -5,7 +5,5 @@
  */
 int add (int a, int n)
 {
-int a = 89, n = 9;
-
-return 0;
+return (a + n);
 }
