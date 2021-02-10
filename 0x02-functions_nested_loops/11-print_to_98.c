@@ -8,11 +8,21 @@
  */
 void print_to_98(int n)
 {
-int n = 0,times=98;
-while( n <= times )
+int ch;
+int i;
+for (ch = 0; ch <= 9; ch++)
 {
-print_to_98("%d\n", n);
-n++
+for (i = 0; i <= 9; i++)
+{
+putchar(ch + '0');
+putchar(i + '0');
+if ((ch != 9) || (i != 9))
+{
+putchar(',');
+putchar(' ');
 }
-return 0;
+}
+}
+putchar('\n');
+return (0);
 }
