@@ -1,28 +1,34 @@
 #include "holberton.h"
 #include <stdio.h>
+
 /**
- * print_to_98 - check the code for Holberton School students.
- * Return: Always 0.
- *@n: a parameter
- *
+ * print_to_98 - a function that prints all natural numbers from n to 98
+ * @n: number in parameter
  */
+
 void print_to_98(int n)
 {
-int ch;
 int i;
-for (ch = 0; ch <= 9; ch++)
+
+if (n <= 98)
 {
-for (i = 0; i <= 9; i++)
+for (i = n; i <= 98; i++)
 {
-putchar(ch + '0');
-putchar(i + '0');
-if ((ch != 9) || (i != 9))
-{
-putchar(',');
-putchar(' ');
+if (i == 98)
+printf("%d", i);
+else
+printf("%d, ", i);
 }
 }
+else
+{
+for (i = n; i >= 98; i--)
+{
+if (i == 98)
+printf("%d", i);
+else
+printf("%d, ", i);
 }
-putchar('\n');
-return (0);
+}
+printf("\n");
 }
