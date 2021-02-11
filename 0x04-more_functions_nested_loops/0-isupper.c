@@ -2,6 +2,7 @@
 /**
  *_isupper - a function that checks for uppercase character.
  *Return: 0 or 1
+ *@c: a parameter
  */
 int _isupper(int c)
 {
