@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  *print_rev - a function that prints a string, in reverse
- *@s: none of ur business 
+ *@s: none of ur business
  *Return: 0
  */
 void print_rev(char *s)
