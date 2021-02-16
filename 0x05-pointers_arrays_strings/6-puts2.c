@@ -2,7 +2,7 @@
 #include "holberton.h"
 /**
  *puts2 -  a function that prints every other character of a string
- *@str: stfu
+ *@str: parameter pointer
  *Return: 0
  */
 void puts2(char *str)
