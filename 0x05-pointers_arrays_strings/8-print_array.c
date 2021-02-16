@@ -8,12 +8,15 @@
  */
 void print_array(int *a, int n)
 {
-int n [5] = {98, 402, -198, 298, -1024};
-int a;
-for(a = 0; a < 5; a++)
+int i;
+for (i = 0; i <= n - 1; i++)
 {
-putchar(',');
-putchar(' ');
-printf("%d ", n[a]);
+if (i != n - 1)
+{
+printf("%d, ", a[i]);
 }
+else
+printf("%d", a[i]);
+}
+printf("\n");
 }
