@@ -16,7 +16,7 @@ if (p != n - 1)
 printf("%d, ", a[p]);
 }
 else
-printf("%d", a[i]);
+printf("%d", a[p]);
 }
 printf("\n");
 }
