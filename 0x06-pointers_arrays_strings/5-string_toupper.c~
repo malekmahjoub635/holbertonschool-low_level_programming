@@ -1,0 +1,15 @@
+#include "holberton.h"
+/**
+ *string_toupper -  a function that changes all lowercase letters of a string to uppercase
+ * Return: 0
+ */
+char *string_toupper(char *)
+{
+int i;
+for (i = 0; i != 0; i++)
+{
+if (s[i] >= 'A' && s[i] <= 'Z')
+s[i] = s[i] - 32;
+}
+return (s);
+}
