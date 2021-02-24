@@ -1,31 +1,46 @@
 #include "holberton.h"
+int _strlen_recursion(char *s);
+int pal(char *s, int len, int i);
 /**
- *_check - check
- *@n: parameter
-*@i: parameter
- *Return: 0
- **/
-int _check(int i, int n)
+ *is_palindrome - function
+ *@s: PAL.
+ * Return: 0
+ */
+int is_palindrome(char *s)
 {
-if (i * n != n)
-i++;
-return (i);
+int len = _strlen_recursion(s);
+return (pal(s, len - 1, 0));
 }
 /**
- *_sqrt_recursion - function that returns the natural square root of a number
- *@n: parameter
+ *_strlen_recursion - check the code
+ *@s: pointer to char
  *Return: 0
  */
-int _sqrt_recursion(int n)
+int _strlen_recursion(char *s)
 {
-if (n < 0)
-return (-1);
-else if (n == 0)
-return (0);
-else
+if (*s != '\0')
 {
-_check(0, n);
-return (_sqrt_recursion(n));
+return (_strlen_recursion(s + 1) + 1);
 }
+return (0);
+}
+/**
+ *pal - is it
+ *@s: char
+ *@len: length
+ *@i: account
+ *Return: 0
+ */
+int pal(char *s, int len, int i)
+{
+if (s[i] == s[len - i] && i == len / 2)
+{   
+return (1);
+}
+else if (s[i] == s[len - i])
+{
+return (pal(s, len, i + 1));
+}
+else
 return (0);
 }
