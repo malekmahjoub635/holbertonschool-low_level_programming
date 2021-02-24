@@ -1,0 +1,10 @@
+#include "holberton.h"
+/**
+ *factorial - a function that returns the factorial of a given number
+ * Return: 0
+ */
+int factorial(int n)
+{
+
+
+}
