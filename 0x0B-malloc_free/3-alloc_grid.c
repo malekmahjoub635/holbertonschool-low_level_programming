@@ -4,7 +4,7 @@
 /**
  * **alloc_grid - array of 2d
  * @width: width of the array
- * @heigth: heigth of the array
+ * @height: heigth of the array
  * Return: pointer to the created matrix (Success)
  * or NULL (Error)
  */
