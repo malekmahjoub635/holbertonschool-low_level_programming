@@ -1,74 +1,47 @@
-include <stdlib.h>
 #include "dog.h"
-/**
- * _strlen - returns the length of a string
- * @s: string to evaluate
- * Return: the length of the string
- */
-int _strlen(char *s)
-{
-  int i;
+#include <stdio.h>
+#include <stdlib.h>
 
-  i = 0;
+/**
+ * new_dog - Creates a new dog of type struct dog
+ * @name: The new dog's name
+ * @age: The new dog's age
+ * @owner: The new dog's owner
+ *
+ * Return: A pointer to the new dog
+ */
 
-  while (s[i] != '\0')
-    {
-      i++;
-    }
-  return (i);
-}
-/**
- * *_strcpy - string copy
- * @dest: original string
- * @src: copied string
- * Return: the pointer to dest
- */
-char *_strcpy(char *dest, char *src)
-{
-int len, i;
-len = 0;
-while (src[len] != '\0')
-{
-len++;
-}
-for (i = 0; i < len; i++)
-{
-dest[i] = src[i];
-}
-dest[i] = '\0';
-return (dest);
-}
-/**
- * new_dog - creates a new dog
- * @name: the dog's name
- * @age: the dog's age
- * @owner: the dog's owner
- * Return: 0
- */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *s;
-int l1, l2;
-l1 = _strlen(name);
-l2 = _strlen(owner);
-s = malloc(sizeof(dog_t));
-if (s == NULL)
+dog_t *newdog;
+int pnewn, pnewo;
+int pn, po;
+newdog = malloc(sizeof(struct dog));
+if (newdog == NULL)
 return (NULL);
-s->name = malloc(sizeof(char) * (l1 + 1));
-if (s->name == NULL)
+for (pn = 1; name[pn] != '\0'; pn++)
+;
+newdog->name = malloc(sizeof(char) * (pn + 1));
+if (newdog->name == NULL)
 {
-free(s);
+free(newdog);
 return (NULL);
 }
-s->owner = malloc(sizeof(char) * (l2 + 1));
-if (s->owner == NULL)
+for (po = 1; owner[po] != '\0'; po++)
+;
+newdog->owner = malloc((po + 1) * sizeof(char));
+if (newdog->owner == NULL)
 {
-free(s);
-free(s->name);
+free(newdog->name);
+free(newdog);
 return (NULL);
 }
-_strcpy(s->name, name);
-_strcpy(s->owner, owner);
-s->age = age;
-return (s);
+newdog->age = age;
+for (pnewn = 0; name[pnewn] != '\0'; pnewn++)
+newdog->name[pnewn] = name[pnewn];
+newdog->name[pnewn] = '\0';
+for (pnewo = 0; owner[pnewo] != '\0'; pnewo++)
+newdog->owner[pnewo] = owner[pnewo];
+newdog->owner[pnewo] = '\0';
+return (newdog);
 }
