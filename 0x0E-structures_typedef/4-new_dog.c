@@ -14,22 +14,22 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *newdog;
-int pnewn, pnewo;
-int pn, po;
+int i, j;
+int k, l;
 newdog = malloc(sizeof(struct dog));
 if (newdog == NULL)
 return (NULL);
-for (pn = 1; name[pn] != '\0'; pn++)
+for (k = 1; name[k] != '\0'; k++)
 ;
-newdog->name = malloc(sizeof(char) * (pn + 1));
+newdog->name = malloc(sizeof(char) * (k + 1));
 if (newdog->name == NULL)
 {
 free(newdog);
 return (NULL);
 }
-for (po = 1; owner[po] != '\0'; po++)
+for (l = 1; owner[l] != '\0'; l++)
 ;
-newdog->owner = malloc((po + 1) * sizeof(char));
+newdog->owner = malloc((l + 1) * sizeof(char));
 if (newdog->owner == NULL)
 {
 free(newdog->name);
@@ -37,11 +37,11 @@ free(newdog);
 return (NULL);
 }
 newdog->age = age;
-for (pnewn = 0; name[pnewn] != '\0'; pnewn++)
-newdog->name[pnewn] = name[pnewn];
-newdog->name[pnewn] = '\0';
-for (pnewo = 0; owner[pnewo] != '\0'; pnewo++)
-newdog->owner[pnewo] = owner[pnewo];
-newdog->owner[pnewo] = '\0';
+for (i = 0; name[i] != '\0'; i++)
+newdog->name[i] = name[i];
+newdog->name[i] = '\0';
+for (j = 0; owner[j] != '\0'; j++)
+newdog->owner[j] = owner[j];
+newdog->owner[j] = '\0';
 return (newdog);
 }
