@@ -1,4 +1,4 @@
-#include "lists.h"
+B#include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,7 +15,7 @@ while (h != NULL)
 if (h->str == NULL)
 printf("[0] (nil)\n");
 else
-printf("[%d] %s\n", h->len, h->str);
+printf("[%d] %s\n", h->i, h->str);
 h = h->next;
 i++;
 }
