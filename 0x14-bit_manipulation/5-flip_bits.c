@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 
 /**
  * flip_bits - flips one number to another
@@ -8,15 +8,14 @@ B#include "holberton.h"
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-int j, i = 0;
-unsigned long int c;
-unsigned long int o = 0;
-o = n & m;
-for (j = 63; j >= 0; j--)
+int j = 0;
+unsigned long int sum;
+sum = n ^ m;
+for (; sum >= 1;)
 {
-c = o >> j;
-if (c & 1)
-i++;
+if ((sum & 1) == 1)
+j++;
+sum >>= 1;
 }
-return (i);
+return (j);
 }
