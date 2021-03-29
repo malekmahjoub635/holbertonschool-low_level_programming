@@ -8,7 +8,7 @@ B#include "holberton.h"
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-int i, j = 0;
+int j, i = 0;
 unsigned long int c;
 unsigned long int o = 0;
 o = n & m;
