@@ -1,33 +1,37 @@
 #include "3-calc.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- *  * get_op_func - function pointer that selects the correct function to perform
- *   * the operation asked by the user
- *    * @s: the operator given by the user
- *     *
- *      * Return: pointer to the function that corresponds to the
- *       * operator given as a parameter
- *        */
-int (*get_op_func(char *s))(int, int)
+ * main - Right code to perform the operations.
+ * @argc: arg count.
+ * @argv: arg vector.
+ * Return: 0 on success.
+ */
+int main(int argc, char *argv[])
 {
-  op_t ops[] = {
-    {"+", op_add},
-    {"-", op_sub},
-    {"*", op_mul},
-    {"/", op_div},
-    {"%", op_mod},
-    {NULL, NULL}
-  };
-  int i;
-
-  i = 0;
-
-  while (ops[i].op)
-    {
-      if (strcmp(ops[i].op, s) == 0)
-	return (ops[i].f);
-      i++;
-    }
-
-  return (NULL);
+int a = 0, b = 0;
+char arg = *argv[2];
+int (*com)(int, int);
+int result;
+if (argc != 4)
+{
+printf("Error\n");
+exit(98);
+}
+if ((arg == '/' && atoi(argv[3]) == 0) || (arg == '%' && atoi(argv[3]) == 0))
+{
+printf("Error\n");
+exit(100);
+}
+com = get_op_func(argv[2]);
+if (com == NULL)
+{
+printf("Error\n");
+exit(99);
+}
+a = atoi(argv[1]);
+b = atoi(argv[3]);
+result = com(a, b);
+printf("%d\n", result);
+return (0);
 }
