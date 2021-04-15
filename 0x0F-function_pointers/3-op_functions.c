@@ -1,4 +1,6 @@
-B#include "3-calc.h"
+#include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * op_add - sums integers
  * @a: num1
