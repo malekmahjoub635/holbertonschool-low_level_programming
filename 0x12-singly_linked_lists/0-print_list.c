@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
- *print_list - print a list of nodes
- *@h: the list to print
+ *print_list - prints a list of nodes
+ *@h: head pointer
  *Return: number of nodes
  */
 size_t print_list(const list_t *h)
@@ -12,7 +12,7 @@ return (0);
 for (i = 0; h != NULL; i++)
 {
 if (h->str != NULL)
-printf("[%d] %s\n", h->len, h->str);
+printf("%d %s\n", h->len, h->str);
 else
 printf("[0] (nil)\n");
 h = h->next;
