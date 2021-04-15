@@ -1,4 +1,4 @@
-B#ifndef CALC_H
+#ifndef CALC_h
 #define CALC_h
 
 #include <stdio.h>
