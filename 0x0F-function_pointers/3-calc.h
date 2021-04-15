@@ -6,10 +6,10 @@
 #include <string.h>
 
 /**
- * strcut op - struct op
- * @op: the operator
- * @f: the function associated
- */
+ * struct op - struct op.
+ * @op: the operator.
+ * @f: the function associated.
+*/
 typedef struct op
 {
 char *op;
