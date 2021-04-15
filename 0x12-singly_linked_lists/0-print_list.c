@@ -12,7 +12,7 @@ return (0);
 for (i = 0; h != NULL; i++)
 {
 if (h->str != NULL)
-printf("%d %s\n", h->len, h->str);
+printf("[%d] %s\n", h->len, h->str);
 else
 printf("[0] (nil)\n");
 h = h->next;
