@@ -12,7 +12,7 @@ return (NULL);
 if ((*head)->next == NULL)
 return (*head);
 t = NULL;
-while (*head)
+while (*head != NULL)
 {
 h = (*head)->next;
 (*head)->next = t;
